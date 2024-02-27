@@ -1,0 +1,118 @@
+<ng-container *ngIf="zalogowaneID != 1000">
+  <div class="wrapper margines">
+    <div class="blednedane1">
+      Brak dostępu!
+      <button
+        class="logowanie"
+        style="margin-top: 1.5rem"
+        (click)="goToStronaGlowna()"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="zalogowaneID == 1000">
+  <div class="wrapper">
+    <form #mojFormularz="ngForm" (ngSubmit)="send()">
+      <h1>EDYCJA PRODUKTU</h1>
+
+      <div class="form-box">
+        <div class="left">
+          <label for="ident">ID:</label>
+        </div>
+        <div class="right">
+          <input
+            type="text"
+            name="ident"
+            id="ident"
+            #ident="ngModel"
+            placeholder="{{ produkt.id }}"
+            [(ngModel)]="produkt.id"
+            disabled
+          />
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="left">
+          <label for="kategoria">Kategoria:</label>
+        </div>
+        <div class="right">
+          <input
+            type="text"
+            name="kategoria"
+            id="kategoria"
+            #kategoria="ngModel"
+            placeholder="{{ produkt.kategoria }}"
+            [(ngModel)]="produkt.kategoria"
+          />
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="left">
+          <label for="nazwa">Nazwa:</label>
+        </div>
+        <div class="right">
+          <input
+            type="text"
+            name="nazwa"
+            id="nazwa"
+            #nazwa="ngModel"
+            placeholder="{{ produkt.nazwa }}"
+            [(ngModel)]="produkt.nazwa"
+          />
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="left">
+          <label for="ilosc">Ilość:</label>
+        </div>
+        <div class="right">
+          <input
+            type="number"
+            name="ilosc"
+            id="ilosc"
+            #ilosc="ngModel"
+            placeholder="{{ produkt.ilosc }}"
+            [(ngModel)]="produkt.ilosc"
+          />
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="left">
+          <label for="cena">Cena:</label>
+        </div>
+        <div class="right">
+          <input
+            type="number"
+            name="cena"
+            id="cena"
+            #cena="ngModel"
+            placeholder="{{ produkt.cena }}"
+            [(ngModel)]="produkt.cena"
+          />
+        </div>
+      </div>
+
+      <div class="control-buttons">
+        <button class="logowanie" (click)="send()">Zatwierdź</button>
+        <button class="wroc" (click)="goBack()">Wróć</button>
+      </div>
+    </form>
+  </div>
+</ng-container>
+
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

@@ -1,0 +1,104 @@
+.border {
+  margin-top: 20px;
+  display: block;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 15px;
+}
+
+.block {
+  color: black;
+  display: inline-block;
+  margin: 10px 15px 10px 15px;
+  width: 250px;
+  height: 380px;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(177, 177, 177);
+}
+
+.blockfirst {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: right;
+  padding-right: 15px;
+}
+
+.blockfirst span {
+  cursor: pointer;
+  color: rgb(95, 95, 95);
+}
+
+.blockfirst span:hover {
+  color: black;
+}
+
+.blocksecond {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+.blockthird {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.blockfourth {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.blockfifth {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockbutton {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: smaller;
+  background-color: rgb(214, 214, 214);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.blockbutton span {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.blockbutton:hover {
+  background-color: rgb(192, 192, 192);
+}

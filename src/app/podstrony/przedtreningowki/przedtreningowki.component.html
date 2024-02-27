@@ -1,0 +1,27 @@
+<div class="border">
+  <div *ngFor="let b of przedtreningowki" class="block">
+    <div class="blockfirst" [routerLink]="['/produkt', b.id]">
+      <span class="material-symbols-outlined"> add_shopping_cart </span>
+    </div>
+    <div class="blocksecond">
+      <img src="../../../assets/images/{{ b.zdjecie }}" height="100%" />
+    </div>
+    <div class="blockthird">{{ b.nazwa }}</div>
+    <div class="blockfourth">{{ b.cena | number : "1.2-2" }} ZŁ</div>
+    <div class="blockfifth">
+      <div class="blockbutton" [routerLink]="['/produkt', b.id]">
+        <span class="material-symbols-outlined">search</span> Zobacz produkt
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

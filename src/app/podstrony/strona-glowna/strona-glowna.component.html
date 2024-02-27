@@ -1,0 +1,71 @@
+<div>
+  <img src="../../../assets/images/tlo.jpg" width="100%" class="tlo" />
+</div>
+<div class="filterInput">
+  <div>
+    <label for="filteredvalue">Szukaj produktu:</label>
+    <input
+      type="text"
+      name="filteredvalue"
+      [(ngModel)]="filterValue"
+      (keyup)="odpalFiltrowanie()"
+    />
+  </div>
+  <div class="sortDiv">
+    Sortowanie wg ceny:
+    <span
+      class="material-symbols-outlined"
+      style="margin-left: 10px"
+      [ngClass]="{ sortOdpalony: sortowanieDesc == true }"
+      (click)="odpalSortowanieDesc()"
+    >
+      arrow_circle_down </span
+    ><span
+      class="material-symbols-outlined"
+      [ngClass]="{ sortOdpalony: sortowanieAsc == true }"
+      (click)="odpalSortowanieAsc()"
+    >
+      arrow_circle_up
+    </span>
+  </div>
+</div>
+<div class="line"></div>
+<div *ngIf="produkty.length == 0" class="braki">Brak produktów</div>
+<div class="border">
+  <div *ngFor="let p of produkty" class="block">
+    <div class="blockfirst">
+      <span
+        class="material-symbols-outlined"
+        [class.chowajPanelAdmina]="zalogowaneID != 1000"
+        [routerLink]="['/edycjaproduktu', p.id]"
+      >
+        edit
+      </span>
+      <span
+        class="material-symbols-outlined left"
+        [routerLink]="['/produkt', p.id]"
+      >
+        add_shopping_cart
+      </span>
+    </div>
+    <div class="blocksecond">
+      <img src="../../../assets/images/{{ p.zdjecie }}" height="100%" />
+    </div>
+    <div class="blockthird">{{ p.nazwa }}</div>
+    <div class="blockfourth">{{ p.cena | number : "1.2-2" }} ZŁ</div>
+    <div class="blockfifth">
+      <div class="blockbutton" [routerLink]="['/produkt', p.id]">
+        <span class="material-symbols-outlined">search</span> Zobacz produkt
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

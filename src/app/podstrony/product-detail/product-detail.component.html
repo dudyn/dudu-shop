@@ -1,0 +1,283 @@
+<div
+  class="border"
+  [ngClass]="{ blokowanie: showPopup == true }"
+  [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+>
+  <div class="lewo">
+    <div class="fota">
+      <img src="../../../assets/images/{{ produkt.zdjecie }}" width="100%" />
+    </div>
+  </div>
+  <div class="prawo">
+    <div class="row1">{{ produkt.nazwa }}</div>
+    <div class="row2">Cena: {{ produkt.cena | number : "1.2-2" }} ZŁ</div>
+
+    <ng-template [ngIf]="produkt.kategoria == 'bialka'">
+      <div class="row">
+        <p>Kategoria:</p>
+        odżywki białkowe
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="produkt.kategoria == 'kreatyny'">
+      <div class="row">
+        <p>Kategoria:</p>
+        kreatyny
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="produkt.kategoria == 'witaminy'">
+      <div class="row">
+        <p>Kategoria:</p>
+        witaminy
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="produkt.kategoria == 'zdrowakuchnia'">
+      <div class="row">
+        <p>Kategoria:</p>
+        zdrowa kuchnia
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="produkt.kategoria == 'przedtreningowki'">
+      <div class="row">
+        <p>Kategoria:</p>
+        przed treningiem
+      </div>
+    </ng-template>
+
+    <div class="row">
+      <p>Firma:</p>
+      {{ produkt.firma }}
+    </div>
+    <ng-template [ngIf]="produkt.smak"
+      ><div class="row">
+        <p>Smak:</p>
+        {{ produkt.smak }}
+      </div></ng-template
+    >
+    <ng-template [ngIf]="produkt.waga"
+      ><div class="row">
+        <p>Waga:</p>
+        {{ produkt.waga }}g
+      </div></ng-template
+    >
+    <ng-template [ngIf]="produkt.ilosc_kapsulek"
+      ><div class="row">
+        <p>Ilość kapsułek:</p>
+        {{ produkt.ilosc_kapsulek }}
+      </div></ng-template
+    >
+    <ng-template [ngIf]="produkt.rodzaj"
+      ><div class="row">
+        <p>Rodzaj:</p>
+        {{ produkt.rodzaj }}
+      </div></ng-template
+    >
+    <ng-template [ngIf]="dostepnoscmala"
+      ><div class="row">
+        <p>Dostępna ilość:</p>
+        mała
+      </div></ng-template
+    >
+    <ng-template [ngIf]="dostepnoscsrednia"
+      ><div class="row">
+        <p>Dostępna ilość:</p>
+        średnia
+      </div></ng-template
+    >
+    <ng-template [ngIf]="dostepnoscduza"
+      ><div class="row">
+        <p>Dostępna ilość:</p>
+        duża
+      </div></ng-template
+    >
+    <ng-template [ngIf]="dostepnoscbrak"
+      ><div class="row">
+        <p>Dostępna ilość:</p>
+        brak
+      </div></ng-template
+    >
+    <div class="row3">Wybierz ilość:</div>
+
+    <div class="d">
+      <div class="wyborIlosci">
+        <div class="wyborIlosciLewo">
+          <div class="ilosc">{{ wyborIlosciProduktu }}</div>
+        </div>
+        <div class="wyborIlosciPrawo">
+          <div class="wyborIlosciPrawoGora" (click)="zwiekszWartosc()">
+            <span class="material-symbols-outlined"> expand_less </span>
+          </div>
+          <div class="wyborIlosciPrawoDol" (click)="zmniejszWartosc()">
+            <span class="material-symbols-outlined"> expand_more </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dodanieDoKoszyka" (click)="dodajDoKoszyka()">
+        <span class="material-symbols-outlined"> add_shopping_cart </span> Dodaj
+        do koszyka
+      </div>
+      <div class="wrocButton" (click)="goBack()">Wróć</div>
+    </div>
+  </div>
+</div>
+<ng-template [ngIf]="tokreatyna">
+  <div
+    class="opis1"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Dlaczego kreatyna?
+  </div>
+  <div class="opis2" [ngClass]="{ blokowanie: showPopup == true }">
+    Kreatyna jest nazywana królową wszystkich suplementów. Na rynku możemy
+    znaleźć parę odmian kreatyny takich jak np. jabłczan. Jednak najlepiej
+    przebadanym, skutecznym oraz najtańszym jest monohydrat kreatyny. Kreatyna
+    występuje w organizmie głównie w ścięgnach. Dostarczymy ją również z
+    pożywienia - jej zawartość największa jest w mięsie, szczególnie surowym. Po
+    obróbce termicznej ilość kreatyny jest degradowana, dlatego trudno jest nam
+    dostarczyć ją tylko z tylko pożywienia, żeby uzyskać korzyści związane ze
+    wzrostem wydolności (właściwości ergogeniczne). 74 Kreatyna zwiększa
+    produkcję energii (ATP), która jest wykorzystywana przez nasze mięśnie w
+    trakcie pierwszych 5-10 sekund intensywnej pracy mięśni razem z
+    fosfokreatyną, która ją odzyskuje. Zostaje przetransportowana z
+    mitochondriów do mięśni, dzięki czemu opóźnia zmęczenie i pozwala na
+    intensywniejsze treningi. Przekładając to na praktykę, zyskujemy 1-2
+    dodatkowe powtórzenia.Kreatynę możemy stosować przez cały rok w dawkach 3-5
+    g dziennie. Nieważne, kiedy i z czym ją dostarczymy w dłuższej perspektywie
+    czasu.
+  </div>
+</ng-template>
+<ng-template [ngIf]="towitamina">
+  <div
+    class="opis1"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Dlaczego witaminy?
+  </div>
+  <div class="opis2" [ngClass]="{ blokowanie: showPopup == true }">
+    Podczas treningu wszystkie procesy fizjologiczne przebiegają szybciej.
+    Temperatura ciała się podnosi i następuje zwiększone wydzielanie potu. Wraz
+    z nim organizm sportowca traci cenne witaminy i składniki mineralne. Jeżeli
+    nie będziemy ich na bieżąco suplementować, szybko możemy doprowadzić do
+    niedoborów pokarmowych. Taki stan przełoży się nie tylko na pogorszenie
+    kondycji czy szybsze uczucie zmęczenia, ale może doprowadzić do osłabienia
+    całego organizmu. Warto pamiętać, że witaminy i minerały wzmacniają nie
+    tylko mięśnie czy stawy, ale także mózg i układ nerwowy. Ich odpowiedni
+    poziom jest zatem niezbędny do utrzymania prawidłowej kondycji fizycznej i
+    psychicznej. Stale pogłębiające się niedobory witaminowe mogą doprowadzić do
+    przewlekłego zmęczenia, rozdrażnienia, a nawet spowodować stany depresyjne.
+    Większość witamin dostarczamy wraz z pożywieniem, zwłaszcza jeżeli dbamy o
+    zdrową dietę i odżywiamy się w sposób zbilansowany. Jednak z uwagi na to, że
+    substancje te są nietrwałe i łatwo ulegają rozpadowi, zwłaszcza podczas
+    obróbki termicznej, włączenie suplementacji może okazać się niezbędne.
+  </div>
+</ng-template>
+<ng-template [ngIf]="tobialko">
+  <div
+    class="opis1"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Dlaczego odżywka białkowa?
+  </div>
+  <div
+    class="opis2"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Odżywka białkowa charakteryzuje się jedną z najwyższych wartości odżywczych
+    na tle innych źródeł białka. Zawdzięcza to bogatemu aminogranowi, czyli puli
+    aminokwasów. Zawiera słynne aminokwasy rozgałęzione (BCAA). Między innymi z
+    tego względu nie jesteśmy za dodatkową suplementacją w kontekście
+    kulturystyki i trójboju. Warto spożywać odżywkę białkową z innymi źródłami
+    białka w celu uzyskania bogatego aminogramu w diecie. Odżywka białkowa to
+    także właściwości zdrowotne. Aminokwasy tworzą większe peptydy, takie tak
+    immunoglobulina i laktoferyna, które wzmacniają pracę naszego układu
+    odpornościowego. Oprócz koncentratu na rynku dostępne jest też białko
+    serwatkowe w formie izolatu i hydrolizatu. Charakteryzują się one głównie
+    mniejszą ilością tłuszczu, co może być pomocne dla osób na skrajnej
+    redukcji, ale cierpi na tym jakość serwatki - po raz kolejny musi zostać
+    poddana procesom, przez które aminokwasy denaturują, co sprawia, że w pewnym
+    stopniu tracimy właściwości zdrowotne. Niższa zawartość tłuszczu wiąże się
+    też zazwyczaj z gorszym smakiem i gęstością odżywki. Jeżeli odczuwasz
+    regularnie dyskomfort w toalecie po spożyciu koncentratu, być może nie
+    tolerujesz laktozy i warto będzie przetestować np. izolat.
+  </div>
+</ng-template>
+<ng-template [ngIf]="tozdrowazywnosc">
+  <div
+    class="opis1"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Dlaczego zdrowa żywność?
+  </div>
+  <div
+    class="opis2"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Zdrowa żywność to kategoria produktów spożywczych, która przeznaczona jest
+    dla sportowców, osób aktywnych oraz wszystkich miłośników zdrowego stylu
+    życia. Jednak z pewnością docenią je również osoby, które starają się
+    schudnąć lub chcą włączyć do swojej diety więcej zdrowych produktów.
+    Znajdziesz tu wartościowe źródła wysokiej jakości białka, węglowodanów
+    złożonych, zdrowych tłuszczów, witamin, minerałów i błonnika. W ten sposób
+    uzyskasz ważne składniki odżywcze, które są niezbędne nie tylko dla ogólnego
+    stanu zdrowia, ale także dla prawidłowego funkcjonowania układu
+    mięśniowo-szkieletowego, regeneracji czy wzrostu masy mięśniowej.
+    Jednocześnie dostarczysz swojemu organizmowi energii życiowej, którą możesz
+    wykorzystać podczas ćwiczeń lub wykonywania innych czynności. Zdrowa żywność
+    jest więc idealnym składnikiem zdrowej diety.
+  </div>
+</ng-template>
+<ng-template [ngIf]="toprzedtreningowka">
+  <div
+    class="opis1"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    Dlaczego przedtreningówka?
+  </div>
+  <div
+    class="opis2"
+    [ngClass]="{ blokowanie: showPopup == true }"
+    [ngClass]="{ blokowanie: showPopupBrakProduktu == true }"
+  >
+    To kultowe puszki dające moc przed treningiem dla wygodnych.
+    Przedtreningówki - mikstury składników z mniej lub bardziej sensownym
+    składem, które mają za zadanie wprowadzić nas w stan terminatora na
+    treningu, czyli pobudzić, poprawić skupienie oraz zwiększyć siłę i
+    wytrzymałość. Poza unikatowym składem mają również unikatową etykietę, co
+    też przekłada się na lepsze rezultaty. Posłużę się przykładem naszej
+    przedtreningówki: BOMBY - następcy PETARDY. W jej skład wchodzi część
+    składników, które opisałem w tym rozdziale (m.in. kreatyna, kofeina,
+    β-alanina). Dlaczego suplement dla wygodnych? Mamy wszystko w jednym
+    miejscu, a ilość niektórych składników jest praktyczna. Np. w jednej porcji
+    BOMBY znajdziesz 300 mg kofeiny, czyli ok. 6 łyżeczek kawy. Bomba to też
+    L-fenyloalanina - odpowiednia dawka tego związku znacznie przyczynia się do
+    sprawniejszej pracy układu nerwowego.
+  </div>
+</ng-template>
+<ng-container *ngIf="showPopup">
+  <div class="popup">
+    Aby kupić produkt należy się zalogować!
+    <button class="popupButton" (click)="hidePopup()">OK</button>
+  </div>
+</ng-container>
+<ng-container *ngIf="showPopupBrakProduktu">
+  <div class="popup">
+    Brak produktu na stanie!
+    <button class="popupButton" (click)="hidePopup()">OK</button>
+  </div>
+</ng-container>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

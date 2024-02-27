@@ -1,0 +1,57 @@
+<ng-container *ngIf="zalogowaneID == 1000">
+  <div class="border">
+    <table class="shadowTop">
+      <tr>
+        <ng-container *ngFor="let a of tytuly">
+          <th class="bold">{{ a }}</th>
+        </ng-container>
+      </tr>
+
+      <ng-container *ngFor="let a of osoby">
+        <tr>
+          <th>{{ a.id }}</th>
+          <th>{{ a.imie }}</th>
+          <th>{{ a.nazwisko }}</th>
+          <th>{{ a.login }}</th>
+          <th>{{ a.email }}</th>
+          <th>{{ a.stan_konta | number : "1.2-2" }} zł</th>
+          <th class="rubbish">
+            <span class="material-symbols-outlined" (click)="usun(a.id)">
+              delete
+            </span>
+          </th>
+        </tr>
+      </ng-container>
+
+      <ng-container *ngIf="osoby.length == 0">
+        <tr>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+  <div class="tableFooter"></div>
+</ng-container>
+
+<ng-container *ngIf="zalogowaneID != 1000">
+  <div class="wrapper">
+    <div class="blednedane">
+      Brak dostępu!
+      <button class="logowanie" (click)="goToStronaGlowna()">OK</button>
+    </div>
+  </div>
+</ng-container>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

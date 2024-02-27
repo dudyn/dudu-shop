@@ -1,0 +1,317 @@
+<div class="wrapper" [ngClass]="{ blokowanie: showPopup == true }">
+  <form #mojFormularz="ngForm" (ngSubmit)="send()">
+    <h1>REJESTRACJA</h1>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="firstname">Imię:</label>
+        <ng-container *ngIf="firstname.invalid && firstname.touched">
+          <div *ngIf="firstname.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="firstname.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          #firstname="ngModel"
+          placeholder="Podaj imię"
+          required
+          minlength="2"
+          [(ngModel)]="imie"
+          [class.invalidborder]="firstname.invalid && firstname.touched"
+        />
+        <ng-container *ngIf="firstname.invalid && firstname.touched">
+          <div *ngIf="firstname.errors?.['required']">
+            <p class="error-text">Wprowadź imię</p>
+          </div>
+          <div *ngIf="firstname.errors?.['minlength']">
+            <p class="error-text">Imię musi zawierać co najmniej 2 znaki</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="secondname">Nazwisko:</label>
+        <ng-container *ngIf="secondname.invalid && secondname.touched">
+          <div *ngIf="secondname.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="secondname.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          name="secondname"
+          id="secondname"
+          #secondname="ngModel"
+          placeholder="Podaj nazwisko"
+          required
+          minlength="2"
+          [(ngModel)]="nazwisko"
+          [class.invalidborder]="secondname.invalid && secondname.touched"
+        />
+        <ng-container *ngIf="secondname.invalid && secondname.touched">
+          <div *ngIf="secondname.errors?.['required']">
+            <p class="error-text">Wprowadź nazwisko</p>
+          </div>
+          <div *ngIf="secondname.errors?.['minlength']">
+            <p class="error-text">Nazwisko musi zawierać co najmniej 2 znaki</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="username">Nazwa użytkownika:</label>
+        <ng-container *ngIf="username.invalid && username.touched">
+          <div *ngIf="username.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="username.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          #username="ngModel"
+          placeholder="Podaj nazwę użytkownika"
+          required
+          minlength="3"
+          [(ngModel)]="login"
+          (input)="sprLogin()"
+          [class.invalidborder]="
+            (username.invalid && username.touched) ||
+            (!poprawnyLogin && username.touched)
+          "
+        />
+        <ng-container *ngIf="username.invalid && username.touched">
+          <div *ngIf="username.errors?.['required']">
+            <p class="error-text">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="username.errors?.['minlength']">
+            <p class="error-text">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+        <ng-container
+          *ngIf="!poprawnyLogin && username.touched && login.length > 2"
+        >
+          <div *ngIf="!this.poprawnyLogin">
+            <p class="error-text">Nazwa użytkownika jest już zajęta</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="password">Hasło:</label>
+        <ng-container *ngIf="password.invalid && password.touched">
+          <div *ngIf="password.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="password.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          #password="ngModel"
+          placeholder="Podaj hasło"
+          required
+          minlength="3"
+          (input)="sprHaslo()"
+          [(ngModel)]="haslo"
+          [class.invalidborder]="password.invalid && password.touched"
+        />
+        <ng-container *ngIf="password.invalid && password.touched">
+          <div *ngIf="password.errors?.['required']">
+            <p class="error-text">Wprowadź hasło</p>
+          </div>
+          <div *ngIf="password.errors?.['minlength']">
+            <p class="error-text">Hasło musi zawierać co najmniej 3 znaki</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="password1">Powtórz hasło:</label>
+        <ng-container *ngIf="password1.invalid && password1.touched">
+          <div *ngIf="password1.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="password1.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="password"
+          id="password1"
+          name="password1"
+          #password1="ngModel"
+          placeholder="Powtórz hasło"
+          required
+          minlength="3"
+          [(ngModel)]="haslo1"
+          (input)="sprHaslo()"
+          [class.invalidborder]="password1.invalid && password1.touched"
+        />
+        <ng-container *ngIf="password1.invalid && password1.touched">
+          <div *ngIf="password1.errors?.['required']">
+            <p class="error-text">Wprowadź hasło</p>
+          </div>
+          <div *ngIf="password1.errors?.['minlength']">
+            <p class="error-text">Hasło musi zawierać co najmniej 3 znaki</p>
+          </div>
+        </ng-container>
+        <ng-container
+          *ngIf="!poprawneHaslo && password1.touched && haslo1.length > 2"
+        >
+          <div *ngIf="!this.poprawneHaslo">
+            <p class="error-text">Hasła muszą być jednakowe</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="mail">Adres e-mail:</label>
+        <ng-container *ngIf="mail.invalid && mail.touched">
+          <div
+            *ngIf="mail.errors?.['required'] && (email == undefined || email == '' || email == null)"
+          >
+            <p class="e1">Wprowadź adres e-mail</p>
+          </div>
+          <div *ngIf="mail.errors?.['pattern']">
+            <p class="e1">Wprowadź adres e-mail poprawnie</p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          id="mail"
+          name="mail"
+          #mail="ngModel"
+          placeholder="Powtórz hasło"
+          required
+          minlength="3"
+          [(ngModel)]="email"
+          [class.invalidborder]="mail.invalid && mail.touched"
+        />
+        <ng-container *ngIf="mail.invalid && mail.touched">
+          <div
+            *ngIf="mail.errors?.['required'] && (email == undefined || email == '' || email == null)"
+          >
+            <p class="error-text">Wprowadź adres e-mail</p>
+          </div>
+          <div *ngIf="mail.errors?.['pattern']">
+            <p class="error-text">Wprowadź adres e-mail poprawnie</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="stanKonta">Stan konta:</label>
+        <ng-container *ngIf="stanKonta.invalid && stanKonta.touched">
+          <div *ngIf="stanKonta.errors?.['required']">
+            <p class="e1">Wprowadź stan konta</p>
+          </div>
+        </ng-container>
+        <ng-container
+          *ngIf="stanKonta.invalid && stanKonta.touched && stan_konta < 0"
+        >
+          <div *ngIf="stan_konta < 0">
+            <p class="e1">Stan konta musi nieujemny</p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="number"
+          id="stanKonta"
+          name="stanKonta"
+          #stanKonta="ngModel"
+          required
+          min="0"
+          [(ngModel)]="stan_konta"
+          [class.invalidborder]="stanKonta.invalid && stanKonta.touched"
+        />
+        <ng-container *ngIf="stanKonta.invalid && stanKonta.touched">
+          <div *ngIf="stanKonta.errors?.['required']">
+            <p class="error-text">Wprowadź stan konta</p>
+          </div>
+        </ng-container>
+        <ng-container
+          *ngIf="stanKonta.invalid && stanKonta.touched && stan_konta < 0"
+        >
+          <div *ngIf="stan_konta < 0">
+            <p class="error-text">Stan konta musi nieujemny</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="control-buttons">
+      <button class="logowanie" [class.disabledButton]="mojFormularz.invalid">
+        Zarejestruj
+      </button>
+      <button class="wroc" (click)="goBack()">Wróć</button>
+    </div>
+  </form>
+</div>
+<ng-container *ngIf="showPopup">
+  <div class="popup">
+    Zarejestrowano pomyślnie!
+    <button class="popupButton" (click)="closePopup()">OK</button>
+  </div>
+</ng-container>
+<div class="unvisible">asd</div>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

@@ -1,0 +1,472 @@
+{
+  "kreatyny": [
+    {
+      "nazwa": "KFD PREMIUM CREATINE - 250G (MONOHYDRAT)",
+      "firma": "KFD",
+      "smak": "jablkowy",
+      "waga": 250,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny1.jpg",
+      "ilosc": 58,
+      "cena": 39.99
+    },
+    {
+      "nazwa": "OSTROVIT TCM - 300G (JABLCZAN)",
+      "firma": "Ostrovit",
+      "smak": "pomaranczowy",
+      "waga": 300,
+      "rodzaj": "jablczan",
+      "zdjecie": "kreatyny2.jpg",
+      "ilosc": 102,
+      "cena": 56.9
+    },
+    {
+      "nazwa": "TREC CREATINE 100% - 300G",
+      "firma": "Trec",
+      "smak": "naturalny",
+      "waga": 300,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny3.jpg",
+      "ilosc": 32,
+      "cena": 79.99
+    },
+    {
+      "nazwa": "ACTIVLAB CREATINE SUPER POWDER - 500G",
+      "firma": "Activlab",
+      "smak": "naturalny",
+      "waga": 500,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny4.jpg",
+      "ilosc": 73,
+      "cena": 89.99
+    },
+    {
+      "nazwa": "BIO TECH CREA ZERO - 320G",
+      "firma": "BioTechUSA",
+      "smak": "naturalny",
+      "waga": 320,
+      "rodzaj": "jablczan",
+      "zdjecie": "kreatyny5.jpg",
+      "ilosc": 11,
+      "cena": 58.99
+    },
+    {
+      "nazwa": "HI TEC TRI-CREATINE MALATE 250G",
+      "firma": "HI TEC",
+      "smak": "naturalny",
+      "waga": 250,
+      "rodzaj": "jablczan",
+      "zdjecie": "kreatyny6.jpg",
+      "ilosc": 29,
+      "cena": 68.99
+    },
+    {
+      "nazwa": "KFD PREMIUM CREATINE - 500G",
+      "firma": "KFD",
+      "smak": "grenadynowy",
+      "waga": 500,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny7.jpg",
+      "ilosc": 150,
+      "cena": 75.99
+    },
+    {
+      "nazwa": "KFD PREMIUM CREATINE - 500G",
+      "firma": "KFD",
+      "smak": "lemoniada",
+      "waga": 500,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny8.jpg",
+      "ilosc": 33,
+      "cena": 75.99
+    },
+    {
+      "nazwa": "KFD PREMIUM CREATINE - 500G",
+      "firma": "KFD",
+      "smak": "mojito",
+      "waga": 98,
+      "rodzaj": "monohydrat",
+      "zdjecie": "kreatyny9.jpg",
+      "ilosc": 150,
+      "cena": 75.99
+    },
+    {
+      "nazwa": "KFD PREMIUM CREATINE - 500G",
+      "firma": "KFD",
+      "smak": "grenadynowy",
+      "waga": 500,
+      "rodzaj": "coca cola",
+      "zdjecie": "kreatyny10.jpg",
+      "ilosc": 156,
+      "cena": 75.99
+    }
+  ],
+  "bialka": [
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 700G",
+      "firma": "KFD",
+      "smak": "mascarpone",
+      "waga": 700,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka1.jpg",
+      "ilosc": 289,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "OLIMP PURE WHEY ISOLATE 95% - 600G",
+      "firma": "Olimp",
+      "smak": "czekolada",
+      "waga": 600,
+      "rodzaj": "izolat bialka",
+      "zdjecie": "bialka2.jpg",
+      "ilosc": 73,
+      "cena": 109
+    },
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 900G",
+      "firma": "KFD",
+      "smak": "baton karmelowo orzechowy",
+      "waga": 900,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka3.jpg",
+      "ilosc": 125,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 900G",
+      "firma": "KFD",
+      "smak": "biala czekolada",
+      "waga": 900,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka4.jpg",
+      "ilosc": 512,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 900G",
+      "firma": "KFD",
+      "smak": "lody waniliowe",
+      "waga": 900,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka5.jpg",
+      "ilosc": 312,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 900G",
+      "firma": "KFD",
+      "smak": "kokosowy",
+      "waga": 900,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka6.jpg",
+      "ilosc": 217,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "KFD PREMIUM WPC 82 - 900G",
+      "firma": "KFD",
+      "smak": "ciasteczkowy",
+      "waga": 900,
+      "rodzaj": "bialko serwatkowe",
+      "zdjecie": "bialka7.jpg",
+      "ilosc": 185,
+      "cena": 72.99
+    },
+    {
+      "nazwa": "KFD PURE WPC 82 INSTANT - 700G",
+      "firma": "KFD",
+      "smak": "naturalny",
+      "waga": 700,
+      "rodzaj": "monohydrat",
+      "zdjecie": "bialka8.jpg",
+      "ilosc": 212,
+      "cena": 59.99
+    },
+    {
+      "nazwa": "OSTROVIT WPC 80 EU STANDARD - 900G",
+      "firma": "Ostrovit",
+      "smak": "kakao",
+      "waga": 900,
+      "rodzaj": "monohydrat",
+      "zdjecie": "bialka9.jpg",
+      "ilosc": 55,
+      "cena": 99.9
+    },
+    {
+      "nazwa": "MARD HI-PROTEIN WHEY 875G - CZEKOLADA KARMEL",
+      "firma": "Mars",
+      "smak": "czekoladowo karmelowy",
+      "waga": 875,
+      "rodzaj": "monohydrat",
+      "zdjecie": "bialka10.jpg",
+      "ilosc": 34,
+      "cena": 139.99
+    }
+  ],
+  "witaminy": [
+    {
+      "nazwa": "KFD VITAMIN D3+K2 200 KAPSULEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 200,
+      "zdjecie": "witaminy1.jpg",
+      "ilosc": "301",
+      "cena": 19.99
+    },
+    {
+      "nazwa": "OLIMP GOLD VIT C FORTE 1000 - 30 KAPSULEK",
+      "firma": "Olimp",
+      "ilosc_kapsulek": 30,
+      "zdjecie": "witaminy2.jpg",
+      "ilosc": "19",
+      "cena": 27.99
+    },
+    {
+      "nazwa": "KFD B-COMPLEX - 60 KAPSULEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 60,
+      "zdjecie": "witaminy3.jpg",
+      "ilosc": "721",
+      "cena": 16.5
+    },
+    {
+      "nazwa": "KFD VITAMIN C+ 100 TABLETEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 100,
+      "zdjecie": "witaminy4.jpg",
+      "ilosc": "321",
+      "cena": 21.99
+    },
+    {
+      "nazwa": "KFD ADEK - 200 TABLETEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 200,
+      "zdjecie": "witaminy5.jpg",
+      "ilosc": "193",
+      "cena": 22.19
+    },
+    {
+      "nazwa": "KFD VITAMIN D3 2000IU - 240 KAPSULEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 240,
+      "zdjecie": "witaminy6.jpg",
+      "ilosc": "555",
+      "cena": 18.99
+    },
+    {
+      "nazwa": "KFD VITAMIN C + ZINC - 120 KAPSULEK",
+      "firma": "KFD",
+      "ilosc_kapsulek": 120,
+      "zdjecie": "witaminy7.jpg",
+      "ilosc": "87",
+      "cena": 19.99
+    },
+    {
+      "nazwa": "MYVITA ADEK FORTE SILVER PURE - 60 KAPSULEK",
+      "firma": "Myvita",
+      "ilosc_kapsulek": 60,
+      "zdjecie": "witaminy8.jpg",
+      "ilosc": "21",
+      "cena": 41.99
+    },
+    {
+      "nazwa": "MYVITA ADEK FORTE SILVER PURE 30 KAPSULEK",
+      "firma": "Myvita",
+      "ilosc_kapsulek": 30,
+      "zdjecie": "witaminy9.jpg",
+      "ilosc": "122",
+      "cena": 27.99
+    },
+    {
+      "nazwa": "OSTROVIT VITAMIN B COMPLEX 90 TABLETEK",
+      "firma": "Ostrovit",
+      "ilosc_kapsulek": 90,
+      "zdjecie": "witaminy10.jpg",
+      "ilosc": "300",
+      "cena": 18.99
+    }
+  ],
+  "przedtreningowki": [
+    {
+      "nazwa": "OSTROVIT PUMP - 500G",
+      "firma": "Ostrovit",
+      "waga": 500,
+      "smak": "cytryna",
+      "zdjecie": "przedtreningowki1.jpg",
+      "ilosc": 198,
+      "cena": 84.9
+    },
+    {
+      "nazwa": "KFD PREMIUM CITRULLINE - 400G",
+      "firma": "KFD",
+      "waga": 400,
+      "smak": "tropikalny",
+      "zdjecie": "przedtreningowki2.jpg",
+      "ilosc": 375,
+      "cena": 49.49
+    },
+    {
+      "nazwa": "KFD PREMIUM PRE-WORKOUT II - 375G",
+      "firma": "KFD",
+      "waga": 375,
+      "smak": "czeresniowy",
+      "zdjecie": "przedtreningowki3.jpg",
+      "ilosc": 125,
+      "cena": 59.99
+    },
+    {
+      "nazwa": "TREC BOOGIEMAN 300G",
+      "firma": "TREC",
+      "waga": 300,
+      "smak": "gumy balonowej",
+      "zdjecie": "przedtreningowki4.jpg",
+      "ilosc": 81,
+      "cena": 94.99
+    },
+    {
+      "nazwa": "TREC NITROBOLON 600G",
+      "firma": "TREC",
+      "waga": 600,
+      "smak": "pomaranczowy",
+      "zdjecie": "przedtreningowki5.jpg",
+      "ilosc": 98,
+      "cena": 94.99
+    },
+    {
+      "nazwa": "OLIMP R-WEILER - 480G",
+      "firma": "Olimp",
+      "waga": 480,
+      "smak": "jagodowy",
+      "zdjecie": "przedtreningowki6.jpg",
+      "ilosc": 11,
+      "cena": 148.49
+    },
+    {
+      "nazwa": "FA NAPLAM ENERGIZER - 270G",
+      "firma": "XTREME",
+      "waga": 270,
+      "smak": "mangowo cytrynowy",
+      "zdjecie": "przedtreningowki7.jpg",
+      "ilosc": 152,
+      "cena": 63.99
+    },
+    {
+      "nazwa": "KFD PREMIUM CITRULLINE - 400G",
+      "firma": "KFD",
+      "waga": 400,
+      "smak": "oranzadowy",
+      "zdjecie": "przedtreningowki8.jpg",
+      "ilosc": 111,
+      "cena": 49.49
+    },
+    {
+      "nazwa": "KFD PREMIUM CITRULLINE - 400G",
+      "firma": "KFD",
+      "waga": 400,
+      "smak": "sex on the beach",
+      "zdjecie": "przedtreningowki9.jpg",
+      "ilosc": 129,
+      "cena": 49.49
+    },
+    {
+      "nazwa": "OSTROVIT CITRULLINE - 210G",
+      "firma": "Ostrovit",
+      "waga": 210,
+      "smak": "gumy balonowej",
+      "zdjecie": "przedtreningowki10.jpg",
+      "ilosc": 233,
+      "cena": 38.9
+    }
+  ],
+  "zdrowakuchnia": [
+    {
+      "nazwa": "OLIMP GLADIATOR 60G",
+      "firma": "Olimp",
+      "waga": 60,
+      "smak": "karmel",
+      "zdjecie": "zdrowakuchnia1.jpg",
+      "ilosc": 831,
+      "cena": 8.99
+    },
+    {
+      "nazwa": "KFD PREMIUM SAUCE XXL - SLONY KARMEL - 800G",
+      "firma": "KFD",
+      "waga": 800,
+      "smak": "slony karmel",
+      "zdjecie": "zdrowakuchnia2.jpg",
+      "ilosc": 93,
+      "cena": 18.99
+    },
+    {
+      "nazwa": "OLIMP MATRIX BATON 80G",
+      "firma": "Olimp",
+      "waga": 80,
+      "smak": "kokosowy",
+      "zdjecie": "zdrowakuchnia3.jpg",
+      "ilosc": 193,
+      "cena": 10.8
+    },
+    {
+      "nazwa": "USN SELECT PROTEIN COOKIE 60G",
+      "firma": "USN",
+      "waga": 60,
+      "smak": "podwojna czekolada",
+      "zdjecie": "zdrowakuchnia4.jpg",
+      "ilosc": 188,
+      "cena": 8
+    },
+    {
+      "nazwa": "GO ON PROTEIN COOKIE 50G",
+      "firma": "GO ON",
+      "waga": 50,
+      "smak": "brownie",
+      "zdjecie": "zdrowakuchnia5.jpg",
+      "ilosc": 511,
+      "cena": 4.5
+    },
+    {
+      "nazwa": "KRUKAM CZEKOLADA Z PASTA KOKOSOWA - 100G",
+      "firma": "KRUKAM",
+      "waga": 100,
+      "smak": "czekoladowy",
+      "zdjecie": "zdrowakuchnia6.jpg",
+      "ilosc": 123,
+      "cena": 9.99
+    },
+    {
+      "nazwa": "KRUKAM CZEKOLADA ZE SLONYMI MIGDALAMI - 100G",
+      "firma": "KRUKAM",
+      "waga": 100,
+      "smak": "czekoladowy",
+      "zdjecie": "zdrowakuchnia7.jpg",
+      "ilosc": 129,
+      "cena": 9.99
+    },
+    {
+      "nazwa": "GO ON GRANOLA 300G",
+      "firma": "GO ON",
+      "waga": 300,
+      "smak": "orzechowo czekoladowy",
+      "zdjecie": "zdrowakuchnia8.jpg",
+      "ilosc": 412,
+      "cena": 11
+    },
+    {
+      "nazwa": "GO ON GRANOLA 300G",
+      "firma": "GO ON",
+      "waga": 300,
+      "smak": "owoce lesne",
+      "zdjecie": "zdrowakuchnia9.jpg",
+      "ilosc": 287,
+      "cena": 11
+    },
+    {
+      "nazwa": "SANTE FIT GRANOLA 300G",
+      "firma": "SANTE",
+      "waga": 300,
+      "smak": "malinowo truskawkowy",
+      "zdjecie": "zdrowakuchnia10.jpg",
+      "ilosc": 350,
+      "cena": 9.36
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+.tlo {
+  margin-top: 0rem;
+}
+
+.border {
+  margin-top: 20px;
+  display: block;
+  float: left;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Manrope", sans-serif;
+}
+
+.block {
+  color: black;
+  display: inline-block;
+  margin: 10px 15px 10px 15px;
+  width: 250px;
+  height: 380px;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(177, 177, 177);
+}
+
+.blockfirst {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.blockfirst span {
+  cursor: pointer;
+  color: rgb(95, 95, 95);
+}
+
+.blockfirst span:hover {
+  color: black;
+}
+
+.blocksecond {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+.blockthird {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.blockfourth {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.blockfifth {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockbutton {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: smaller;
+  background-color: rgb(214, 214, 214);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.blockbutton span {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.blockbutton:hover {
+  background-color: rgb(192, 192, 192);
+}
+
+.left {
+  display: flex;
+  float: left;
+}
+
+.chowajPanelAdmina {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.filterInput {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1.1rem;
+  font-size: 18px;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  border-bottom: 2px solid rgb(20, 17, 65);
+}
+
+.filterInput input {
+  font-size: 14px;
+  height: 36px;
+  border: 2px solid rgb(20, 17, 65);
+  color: black;
+  border-radius: 5px;
+  padding: 20px 20px 20px 20px;
+  background-color: transparent;
+  margin-right: 15px;
+}
+
+.filterInput label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.braki {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(20, 17, 65);
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.sortDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sortDiv span {
+  font-size: 50px;
+  color: rgb(20, 17, 65);
+}
+
+.sortDiv span:hover {
+  color: rgb(83, 76, 179);
+  cursor: pointer;
+}
+
+.sortOdpalony {
+  color: rgb(33, 145, 33) !important;
+}
+
+.galaxy__parallax {
+  position: absolute;
+}
+
+.galaxy__img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+<div
+  class="wrapper"
+  [class.blokowanie]="showPopup"
+  [class.blokowaniePelne]="showPopupError"
+>
+  <h1>SZCZEGÓŁY KONTA</h1>
+  <div class="form-box">
+    <div class="left"><p>ID:</p></div>
+    <div class="right">
+      <p>{{ osoba.id }}</p>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="left"><p>Imię:</p></div>
+    <div class="right">
+      <p>{{ osoba.imie }}</p>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="left"><p>Nazwisko:</p></div>
+    <div class="right">
+      <p>{{ osoba.nazwisko }}</p>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="left"><p>Adres e-mail:</p></div>
+    <div class="right">
+      <p>{{ osoba.email }}</p>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="left"><p>Login:</p></div>
+    <div class="right">
+      <p>{{ osoba.login }}</p>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="left"><p>Stan konta:</p></div>
+    <div class="right">
+      <p>{{ osoba.stan_konta | number : "1.2-2" }} zł</p>
+    </div>
+  </div>
+  <div class="control-buttons">
+    <button (click)="wyloguj()">Wyloguj</button>
+    <button (click)="openPopup()">Usuń konto</button>
+  </div>
+</div>
+<ng-container *ngIf="showPopup">
+  <div class="popup">
+    Czy na pewno chcesz usunąć konto?
+    <div class="przyciski">
+      <button class="popupButton" (click)="closePopupZUsuwaniem()">TAK</button>
+      <button class="popupButton" (click)="closePopupBezUsuwania()">NIE</button>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="showPopupError">
+  <div class="popup2">
+    Brak dostępu
+    <div class="przyciski">
+      <button class="popupButton" (click)="closePopup2()">OK</button>
+    </div>
+  </div>
+</ng-container>
+<div class="unvisible">asd</div>
+
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

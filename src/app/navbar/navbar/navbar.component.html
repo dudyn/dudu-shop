@@ -1,0 +1,85 @@
+<div class="nav">
+  <div class="title">
+    <div class="dudulogo" [routerLink]="['/stronaglowna']"><h1>DUDU</h1></div>
+
+    <div class="szukanieorazikony">
+      <ng-container *ngIf="!czyZalogowany"
+        ><div></div>
+        <div class="hello">Witaj, gość.</div></ng-container
+      >
+      <ng-container *ngIf="czyZalogowany"
+        ><div></div>
+        <div class="hello">
+          Witaj, {{ zalogowanaOsoba.imie }}.
+        </div></ng-container
+      >
+
+      <div class="dodatkowy">
+        <ng-container
+          *ngIf="zalogowanaOsoba.id == 1000 && czyZalogowany == true"
+          ><div class="guzik" [routerLink]="['/paneladmina']">
+            <span class="material-symbols-outlined">
+              admin_panel_settings
+            </span>
+          </div></ng-container
+        >
+        <ng-container *ngIf="!czyZalogowany"
+          ><div class="guzik" [routerLink]="['/logowanie']">
+            <span class="material-symbols-outlined ikona"> person </span>Zaloguj
+            sie
+          </div></ng-container
+        >
+        <ng-container *ngIf="czyZalogowany"
+          ><div class="guzik" [routerLink]="['/konto', zalogowanaOsoba.id]">
+            <span class="material-symbols-outlined ikona"> person </span>Moje
+            konto
+          </div></ng-container
+        >
+
+        <div class="guzik" [routerLink]="['/koszyk']">
+          <span class="material-symbols-outlined ikona"> shopping_cart </span
+          >Koszyk ({{ ile }})
+        </div>
+        <div class="guzik" [routerLink]="['/pomoc']">
+          <span class="material-symbols-outlined ikona"> help </span>Pomoc
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="categoriesbar">
+  <div class="navbutton" [routerLink]="['/bialka']" routerLinkActive="aktywny">
+    Odżywki białkowe
+  </div>
+  <div
+    class="navbutton"
+    [routerLink]="['/kreatyny']"
+    routerLinkActive="aktywny"
+  >
+    Kreatyny
+  </div>
+  <div
+    class="navbutton"
+    [routerLink]="['/witaminy']"
+    routerLinkActive="aktywny"
+  >
+    Witaminy
+  </div>
+  <div
+    class="navbutton"
+    [routerLink]="['/przedtreningowki']"
+    routerLinkActive="aktywny"
+  >
+    Przed treningiem
+  </div>
+  <div
+    class="navbutton"
+    [routerLink]="['/zdrowakuchnia']"
+    routerLinkActive="aktywny"
+  >
+    Zdrowa kuchnia
+  </div>
+</div>
+<div>
+  <!--<img class="obraz" src="assets/images/kreatyna1.jpg" alt="image" />-->
+</div>

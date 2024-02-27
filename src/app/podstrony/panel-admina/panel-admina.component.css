@@ -1,0 +1,118 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  color: rgb(20, 17, 65);
+}
+
+.blednedane {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 238, 238);
+  border: solid 1px black;
+  color: rgb(20, 17, 65);
+  font-weight: 700;
+  padding: 30px 10px 30px 10px;
+  box-shadow: 0 0 10px #000;
+  border-color: rgb(177, 177, 177);
+}
+
+.logowanie {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 18px;
+  background-color: rgb(224, 148, 32);
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logowanie:hover {
+  background-color: rgb(170, 113, 27);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+span {
+  margin-right: 15px;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  font-weight: 400;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(226, 226, 226);
+}
+
+tr:first-child {
+  font-weight: 500;
+  background-color: rgb(20, 17, 65);
+  color: rgb(219, 219, 219);
+}
+
+.bold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+tr:hover:not(tr:first-child) {
+  background-color: rgb(70, 70, 70);
+  color: rgb(219, 219, 219);
+}
+
+.tableFooter {
+  width: 100%;
+  height: 25px;
+  background-color: rgb(20, 17, 65);
+  box-shadow: 0px 4px 8px -4px rgba(71, 71, 71);
+}
+
+.shadowTop {
+  box-shadow: 0px -4px 8px -4px rgba(71, 71, 71);
+}
+
+.border {
+  margin-top: 2rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.rubbish span {
+  font-weight: 300 !important;
+}
+
+.rubbish span:hover {
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+}
+
+.lastbar {
+  position: fixed !important;
+  bottom: 0 !important;
+}

@@ -1,0 +1,97 @@
+<ng-container *ngIf="!czyZalogowany">
+  <div class="wrapper">
+    <div class="blednedane">
+      Aby korzystać z koszyka musisz się zalogować!
+      <button class="logowanie" (click)="goToStronaGlowna()">OK</button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="czyZalogowany == true" style="width: 50rem">
+  <div class="wrapper" *ngIf="produktyWKoszyku.length == 1">
+    <div class="blednedane">
+      <p class="hajeden">Koszyk jest pusty</p>
+    </div>
+  </div>
+
+  <div
+    class="border"
+    *ngIf="produktyWKoszyku.length != 1"
+    [ngClass]="{ blokowanie: showPopup == true || kupionyPopup == true }"
+  >
+    <div class="row1">
+      <div class="a a1">Poz.</div>
+      <div class="b b1">zdjęcie</div>
+      <div class="c c1">nazwa</div>
+      <div class="d d1">ilość</div>
+      <div class="e e1">cena za szt.</div>
+      <div class="iks iks1">usuń</div>
+    </div>
+    <div *ngFor="let p of produktyWKoszyku; let i = index">
+      <ng-container *ngIf="i == 0"></ng-container>
+      <div class="row" *ngIf="i != 0">
+        <div class="a">{{ i }}</div>
+        <div class="b">
+          <img src="../../../assets/images/{{ p.zdjecie }}" height="95%" />
+        </div>
+        <div class="c">{{ p.nazwa }}</div>
+        <div class="d">{{ p.ilosc }} szt.</div>
+        <div class="e">{{ p.cena }} zł</div>
+        <div class="iks" (click)="usunPozycje(i)">
+          <span class="material-symbols-outlined"> delete </span>
+        </div>
+      </div>
+    </div>
+    <div class="row1 row2">
+      <div class="a a1" style="visibility: hidden"></div>
+      <div class="b b1" style="visibility: hidden"></div>
+      <div class="c c1" style="visibility: hidden"></div>
+      <div class="d d1 d2">Cena:</div>
+      <div class="e e1 e2">{{ cena | number : "1.2-2" }} zł</div>
+      <div class="iks iks1" style="visibility: hidden"></div>
+    </div>
+    <div class="buttony">
+      <button (click)="wyczyscKoszyk()" class="btnBlue">WYCZYŚĆ</button>
+      <button (click)="kup()" class="btnOrange">KUP</button>
+    </div>
+  </div>
+  <div class="test">asd</div>
+</ng-container>
+
+<ng-container *ngIf="showPopup">
+  <div class="blednedane transform">
+    Zbyt mało środków na koncie!
+    <button class="btnOrange" (click)="hidePopup()">OK</button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="kupionyPopup">
+  <div class="wrapperKupione">
+    <h1>Kupiłeś następujące produkty:</h1>
+    <div *ngFor="let p of produktyWKoszyku; let i = index" style="width: 100%">
+      <div class="form-box" *ngIf="i != 0">
+        <div class="left">
+          <p>{{ p.nazwa }}:</p>
+        </div>
+        <div class="right">
+          <p>{{ p.ilosc }} szt.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cena">Łączna cena: {{ cena | number : "1.2-2" }}zł</div>
+
+    <div>
+      <button (click)="closeKupionyPopup()">OK</button>
+    </div>
+  </div>
+  <div class="hidden">aaa</div>
+</ng-container>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>

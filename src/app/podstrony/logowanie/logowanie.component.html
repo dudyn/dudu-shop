@@ -1,0 +1,108 @@
+<div class="wrapper">
+  <form
+    #mojFormularz="ngForm"
+    (ngSubmit)="send()"
+    [ngClass]="{ blokowanie: bledneHaslo == true }"
+  >
+    <h1>LOGOWANIE</h1>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="username">Nazwa użytkownika:</label>
+        <ng-container *ngIf="username.invalid && username.touched">
+          <div *ngIf="username.errors?.['required']">
+            <p class="e1">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="username.errors?.['minlength']">
+            <p class="e1">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          #username="ngModel"
+          placeholder="Podaj nazwę użytkownika"
+          required
+          minlength="3"
+          [(ngModel)]="login"
+          [class.invalidborder]="username.invalid && username.touched"
+        />
+        <ng-container *ngIf="username.invalid && username.touched">
+          <div *ngIf="username.errors?.['required']">
+            <p class="error-text">Wprowadź nazwę użytkownika</p>
+          </div>
+          <div *ngIf="username.errors?.['minlength']">
+            <p class="error-text">
+              Nazwa użytkownika musi zawierać co najmniej 3 znaki
+            </p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="left">
+        <label for="password">Hasło:</label>
+        <ng-container *ngIf="password.invalid && password.touched">
+          <div *ngIf="password.errors?.['required']">
+            <p class="e1">Wprowadź hasło</p>
+          </div>
+          <div *ngIf="password.errors?.['minlength']">
+            <p class="e1">Hasło musi zawierać co najmniej 3 znaki</p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="right">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          #password="ngModel"
+          placeholder="Podaj hasło"
+          required
+          minlength="3"
+          [(ngModel)]="haslo"
+          [class.invalidborder]="password.invalid && password.touched"
+        />
+        <ng-container *ngIf="password.invalid && password.touched">
+          <div *ngIf="password.errors?.['required']">
+            <p class="error-text">Wprowadź hasło</p>
+          </div>
+          <div *ngIf="password.errors?.['minlength']">
+            <p class="error-text">Hasło musi zawierać co najmniej 3 znaki</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="control-buttons">
+      <button class="logowanie" [routerLink]="['/rejestracja']">
+        Zarejestruj
+      </button>
+      <button class="logowanie" (click)="send()">Zaloguj</button>
+      <button class="wroc" (click)="goBack()">Wróć</button>
+    </div>
+  </form>
+  <ng-container *ngIf="bledneHaslo">
+    <div class="blednedane">
+      Podano nieprawidlowe dane!
+      <button class="logowanie" (click)="hidePopup(); mojFormularz.resetForm()">
+        OK
+      </button>
+    </div>
+  </ng-container>
+</div>
+<div class="lastbar">
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+  <div class="dudu">DUDU</div>
+</div>
